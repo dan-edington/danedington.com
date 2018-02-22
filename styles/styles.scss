@@ -1,0 +1,134 @@
+@import 'reset';
+
+$backgroundColour: #ffd800;
+$textColour: #646464;
+$altBackgroundColour: #ffffff;
+$linkColour: #ff5456;
+
+
+body {
+
+  font-family: 'Roboto', sans-serif;
+  color: $textColour;
+  text-align: center;
+  font-size: 17px;
+  line-height: 1;
+
+}
+
+header {
+
+  background-color: $altBackgroundColour;
+
+  > h1 {
+
+    background: url('../assets/logo.png') center center no-repeat;
+    background-size: contain;
+    text-indent: -9999px;
+    width: 958px;
+    height: 77px;
+    margin: 70px auto 0 auto;
+
+  }
+
+  @media only screen and (max-width: 992px){
+
+    > h1 {
+      background-size: 90%;
+      width: auto;
+    }
+
+  }
+
+  > p {
+
+    margin: 35px auto;
+    padding: 0;
+    font-style: italic;
+    font-size: 1em;
+
+  }
+
+}
+
+main {
+
+  background-color: $backgroundColour;
+  padding: 35px 17px;
+
+  > h2 {
+    font-weight: 300;
+    margin: 0 0 35px 0;
+    line-height: 35px;
+  }
+
+  > p {
+
+    margin: 0 0 35px 0;
+    line-height: 35px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+  }
+
+  a {
+
+    &:link, &:visited, &:active {
+      color: $linkColour;
+      text-decoration: none;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+  }
+
+  .mainSkills {
+
+    list-style-type: none;
+    background-color: $altBackgroundColour;
+    margin: 0 auto 35px auto;
+    padding: 35px;
+    width: 285px;
+    font-style: italic;
+
+    li {
+      line-height: 35px;
+    }
+
+    li:not(:last-child) {
+      margin-bottom: 35px;
+    }
+
+  }
+
+  @media only screen and (max-width: 389px){
+
+    .mainSkills {
+      width: 216px;
+    }
+
+  }
+
+}
+
+footer {
+
+  background-color: $altBackgroundColour;
+  height: 70px;
+  padding: 0 17px;
+
+  p {
+    background: url(../assets/bee.png) left center no-repeat;
+    background-size: 20%;
+    margin: 0 auto;
+    padding: 0;
+    line-height: 70px;
+    width: 280px;
+    text-align: right;
+  }
+
+}
